@@ -1,6 +1,7 @@
 # 银行业务管理系统
 
-B/S架构的基本demo
+这是数据库课程的实验三。
+This is lab3 for course Database.
 
 ### 运行
 
