@@ -1,0 +1,22 @@
+<!doctype html>
+<title>删除客户</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">删除客户</h1>
+    </header>
+  
+    <form method="post">
+      <label for="cli_id">身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>
+  
+      <input type="submit" name="cli_del" value="删除客户">
+    </form>
+
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+    
+  </section>

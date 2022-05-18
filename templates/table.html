@@ -1,0 +1,82 @@
+<!doctype html>
+<title>Tables</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<body><section class="content">
+  <header>
+    <h1 style="text-align:center;">银行管理系统</h1>
+  </header>
+  
+  <table>
+    <thead>
+        <tr>
+            <th style="width: 50%"> 支行名 </th>
+            <th style="width: 50%"> 城市 </th>
+        </tr>
+    </thead>
+    <tbody>
+		{% for row in banks %}
+		<tr>
+			<td style="width: 50%"> {{ row[0]  }}</td>
+			<td style="width: 50%"> {{ row[1] }}</td>
+		<tr>
+		{% endfor %}
+	</tbody>
+  </table>
+
+  <table>
+    <thead>
+        <tr>
+            <th style="width: 50%"> 员工号 </th>
+            <th style="width: 50%"> 支行名 </th>
+        </tr>
+    </thead>
+    <tbody>
+		{% for row in assists %}
+		<tr>
+			<td style="width: 50%"> {{ row[0]  }}</td>
+			<td style="width: 50%"> {{ row[1] }}</td>
+		<tr>
+		{% endfor %}
+	  </tbody>
+  </table>
+  
+  <form method="post" id="table">
+  <h2 style="text-align:center;">客户管理</h2>
+  <div>
+    <input type="submit" id="input" name="cli_add" value="添加客户">
+    <input type="submit" id="input" name="cli_del" value="删除客户">
+    <input type="submit" id="input" name="cli_alt" value="修改客户">
+    <input type="submit" id="input" name="cli_search" value="查询客户">
+  </div>
+  <h2 style="text-align:center;">账户管理</h2>
+  <div>
+    <input type="submit" id="input" name="acc_open" value="开户">
+    <input type="submit" id="input" name="acc_close" value="销户">
+    <input type="submit" id="input" name="acc_alt" value="修改账户">
+    <input type="submit" id="input" name="acc_search" value="查询账户">
+  </div>
+  <h2 style="text-align:center;">贷款管理</h2>
+  <div>
+    <input type="submit" id="input" name="debt_add" value="添加贷款">
+    <input type="submit" id="input" name="debt_del" value="删除贷款">
+    <input type="submit" id="input" name="debt_search" value="查询贷款">
+    <input type="submit" id="input" name="debt_pay" value="发放贷款">
+  </div>
+  <h2 style="text-align:center;">业务统计</h2>
+  <div>
+    <input type="submit" id="input" name="by_types" value="按分类">
+    <input type="submit" id="input" name="by_time" value="按时间">
+  </div>
+  <div style="text-align: center; margin: 50px;">PB17111562 沈欣怡</div>
+</section>
+</body>
+
+<head><style>
+#input {
+  width: 20%;
+  margin: 2%;
+  height: 30px;
+}
+</style></head>

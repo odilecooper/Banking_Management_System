@@ -1,0 +1,31 @@
+<!doctype html>
+<title>销户</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<header>
+  <h1 style="text-align:center;">销户</h1>
+    <script>
+      function warning()
+      {
+        alert("销户失败！");
+      }
+    </script>
+</header>
+  
+<body onload="warning()" class="content">
+    <section class="content">
+        <form method="post">
+          <label for="acc_num">账户号</label>
+              <input type="acc_num" name="acc_num" id="acc_num" required>
+          <label for="cli_id">客户身份证号</label>
+              <input type="cli_id" name="cli_id" id="cli_id" required>
+          <input type="submit" name="acc_close" value="销户">
+        </form>
+
+        <form method="post">
+          <input type="submit" name="return" value="返回">
+        </form>
+    
+    </section>
+</body>

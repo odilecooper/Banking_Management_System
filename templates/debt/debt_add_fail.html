@@ -1,0 +1,40 @@
+<!doctype html>
+<title>添加贷款</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<header>
+    <h1 style="text-align:center;">添加贷款</h1>
+    <script>
+      function warning()
+      {
+        alert("添加贷款失败！");
+      }
+    </script>
+</header>
+  
+<body onload="warning()" class="content">
+    <section class="content">
+        <form method="post">
+          <label for="bank_name">支行名</label>
+              <input type="bank_name" name="bank_name" id="bank_name" required>
+          <label for="amount">金额</label>
+              <input type="amount" name="amount" id="amount" required>
+          <label for="cli_id">客户1身份证号</label>
+              <input type="cli_id1" name="cli_id1" id="cli_id1" required>
+          <label for="cli_id">客户2身份证号</label>
+              <input type="cli_id2" name="cli_id2" id="cli_id2">
+          <label for="cli_id">客户3身份证号</label>
+              <input type="cli_id3" name="cli_id3" id="cli_id3">
+          <label for="cli_id">客户4身份证号</label>
+              <input type="cli_id4" name="cli_id4" id="cli_id4">
+          <label for="cli_id">客户5身份证号</label>
+              <input type="cli_id5" name="cli_id5" id="cli_id5">
+          <input type="submit" name = "debt_add" value="添加贷款">
+        </form>
+
+        <form method="post">
+          <input type="submit" name="return" value="返回">
+        </form>    
+    </section>
+</body>

@@ -1,0 +1,50 @@
+<!doctype html>
+<title>修改客户信息</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">修改客户信息</h1>
+    </header>
+  
+    <form method="post">
+      <h3>修改个人信息</h3>
+      <label for="cli_id">客户身份证号</label>
+					<input type="cli_id" name="cli_id" id="cli_id" required>
+      <label for="cli_tel">联系电话</label>
+          <input type="cli_tel" name="cli_tel" id="cli_tel" required>
+			<label for="cli_addr">家庭住址</label>
+          <input type="cli_addr" name="cli_addr" id="cli_addr" required>
+      		<input type="submit" name="alt_cli" value="修改个人信息">  
+		</form>
+			
+		<form method="post">
+      <h3>修改联系人信息</h3>
+      <label for="cli_id">客户身份证号</label>
+					<input type="cli_id" name="cli_id" id="cli_id" required>
+      <label for="con_name">联系人姓名</label>
+          <input type="con_name" name="con_name" id="con_name" required>
+      <label for="con_tel">联系人手机号</label>
+          <input type="con_tel" name="con_tel" id="con_tel" required>
+      <label for="con_email">联系人Email</label>
+          <input type="con_email" name="con_email" id="con_email" required>
+      <label for="con_relat">联系人关系</label>
+          <input type="con_relat" name="con_relat" id="con_relat" required>
+      		<input type="submit" name="alt_con" value="修改联系人信息">  
+		</form>
+			
+		<form method="post">
+      <h3>修改联系员工</h3>
+      <label for="cli_id">客户身份证号</label>
+					<input type="cli_id" name="cli_id" id="cli_id" required>
+      <label for="assist_id">联系银行员工</label>
+          <input type="assist_id" name="assist_id" id="assist_id">  
+      		<input type="submit" name="alt_assist" value="修改联系员工">  
+    </form>
+
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+    
+  </section>

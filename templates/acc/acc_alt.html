@@ -1,0 +1,64 @@
+<!doctype html>
+<title>修改账户</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">修改账户</h1>
+    </header>
+  
+    <form method="post">
+      <h3>存款</h3>
+      <label for="acc_num">账户号</label>
+          <input type="acc_num" name="acc_num" id="acc_num" required>    
+      <label for="amount">金额</label>
+          <input type="amount" name="amount" id="amount" required>    
+      
+      <input type="submit" name="save" value="存款">
+    </form>
+
+    <form method="post">
+      <h3>取款</h3>
+      <label for="acc_num">账户号</label>
+          <input type="acc_num" name="acc_num" id="acc_num" required>    
+      <label for="cli_id">客户身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>    
+      <label for="amount">金额</label>
+          <input type="amount" name="amount" id="amount" required>    
+      
+      <input type="submit" name="exploit" value="取款">
+    </form>
+
+    <form method="post">
+      <h3>修改支行</h3>
+      <label for="acc_num">账户号</label>
+          <input type="acc_num" name="acc_num" id="acc_num" required>    
+      <label for="bank_name">支行名</label>
+          <input type="bank_name" name="bank_name" id="bank_name" required>    
+      <input type="submit" name="alt_bank" value="修改支行">
+    </form>
+
+    <form method="post">
+      <h3>添加账户</h3>
+      <label for="acc_num">账户号</label>
+          <input type="acc_num" name="acc_num" id="acc_num" required>    
+      <label for="cli_id">客户身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>
+      <input type="submit" name="add_cli" value="添加客户">
+    </form>
+
+    <form method="post">
+      <h3>删除账户</h3>
+      <label for="acc_num">账户号</label>
+          <input type="acc_num" name="acc_num" id="acc_num" required>    
+      <label for="cli_id">客户身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>
+
+      <input type="submit" name="del_cli" value="删除客户">  
+    </form>
+    
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+</section>

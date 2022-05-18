@@ -1,0 +1,62 @@
+<!doctype html>
+<title>查询客户</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">查询客户</h1>
+    </header>
+
+    <table>
+      <thead>
+          <tr>
+              <th style="width: 10%"> 身份证号 </th>
+              <th style="width: 10%"> 姓名 </th>
+              <th style="width: 10%"> 联系电话 </th>
+              <th style="width: 10%"> 家庭住址 </th>
+              <th style="width: 10%"> 联系人姓名 </th>
+              <th style="width: 10%"> 联系人手机号 </th>
+              <th style="width: 10%"> 联系人Email </th>
+              <th style="width: 10%"> 联系人关系 </th>
+              <th style="width: 10%"> 联系银行员工 </th>
+          </tr>
+      </thead>
+      <tbody>
+  		{% for row in rows %}
+  		<tr>
+  			<td style="width: 10%"> {{ row[0] }}</td>
+  			<td style="width: 10%"> {{ row[1] }}</td>
+  			<td style="width: 10%"> {{ row[2] }}</td>
+  			<td style="width: 10%"> {{ row[3] }}</td>
+  			<td style="width: 10%"> {{ row[4] }}</td>
+  			<td style="width: 10%"> {{ row[5] }}</td>
+  			<td style="width: 10%"> {{ row[6] }}</td>
+  			<td style="width: 10%"> {{ row[7] }}</td>
+  			<td style="width: 10%"> {{ row[8] }}</td>
+  		<tr>
+  		{% endfor %}
+  	</tbody>
+    </table>
+
+    <form method="post">
+      <label for="cli_id">身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>
+      <input type="submit" name="by_id" value="查询客户">
+    </form>
+
+    <form method="post">
+      <label for="cli_name">姓名</label>
+          <input type="cli_name" name="cli_name" id="cli_name" required>
+      <input type="submit" name="by_name" value="查询客户">
+    </form>
+
+    <form method="post">
+      <input type="submit" name="search_all" value="查询全部">
+    </form>
+
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+
+  </section>

@@ -1,0 +1,58 @@
+<!doctype html>
+<title>查询贷款</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">查询贷款</h1>
+    </header>
+    <table>
+      <thead>
+          <tr>
+              <th style="width: 19%"> 贷款号 </th>
+              <th style="width: 19%"> 支行名 </th>
+              <th style="width: 19%"> 金额 </th>
+              <th style="width: 19%"> 已支付金额 </th>
+              <th style="width: 19%"> 客户身份证号 </th>
+          </tr>
+      </thead>
+      <tbody>
+  		{% for row in rows %}
+  		<tr>
+  			<td style="width: 10%"> {{ row[0] }}</td>
+  			<td style="width: 10%"> {{ row[1] }}</td>
+  			<td style="width: 10%"> {{ row[2] }}</td>
+  			<td style="width: 10%"> {{ row[3] }}</td>
+  			<td style="width: 10%"> {{ row[4] }}</td>
+  		<tr>
+  		{% endfor %}
+  	</tbody>
+    </table>
+  
+    <form method="post">
+      <label for="debt_num">贷款号</label>
+          <input type="debt_num" name="debt_num" id="debt_num" required>
+          <input type="submit" name="by_debt_num" value="查询贷款">  
+    </form>
+
+    <form method="post">
+      <label for="cli_id">客户身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>
+          <input type="submit" name="by_cli_id" value="查询贷款">  
+    </form>
+
+    <form method="post">
+      <label for="bank_name">支行名</label>
+          <input type="bank_name" name="bank_name" id="bank_name" required>
+          <input type="submit" name="by_bank_name" value="查询贷款">  
+    </form>
+
+    <form method="post">
+      <input type="submit" name="search_all" value="查询全部">
+    </form>
+
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+</section>

@@ -1,0 +1,22 @@
+<!doctype html>
+<title>发放贷款</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">发放贷款</h1>
+    </header>
+  
+    <form method="post">
+      <label for="debt_num">贷款号</label>
+          <input type="debt_num" name="debt_num" id="debt_num" required>
+      <label for="pay_sum">金额</label>
+          <input type="pay_sum" name="pay_sum" id="pay_sum" required>
+      <input type="submit" name="debt_pay" value="发放贷款">
+    </form>
+
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+</section>

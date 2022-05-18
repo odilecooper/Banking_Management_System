@@ -1,0 +1,23 @@
+<!doctype html>
+<title>删除贷款</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+    <header>
+      <h1 style="text-align:center;">删除贷款</h1>
+    </header>
+  
+    <form method="post">
+      <label for="debt_num">贷款号</label>
+          <input type="debt_num" name="debt_num" id="debt_num" required>
+      <label for="cli_id">客户身份证号</label>
+          <input type="cli_id" name="cli_id" id="cli_id" required>
+      <input type="submit" name="debt_del" value="删除贷款">
+  
+    </form>
+
+    <form method="post">
+      <input type="submit" name="return" value="返回">
+    </form>
+</section>
